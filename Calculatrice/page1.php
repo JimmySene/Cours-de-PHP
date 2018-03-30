@@ -8,14 +8,14 @@
 	
 		<form action="page2.php" method="post">
 			<p>
-				<input type="number" name="valeur1" />
+				<input type="text" name="valeur1" />
 				<select name="operateur">
 					<option value="+">+</option>
 					<option value="-">-</option>
 					<option value="*">*</option>
 					<option value="/">/</option>
 				</select>
-				<input type="number" name="valeur2" />
+				<input type="text" name="valeur2" />
 			</p>
 			<p><input type="submit" value="Calculer" /></p>
 		</form>
