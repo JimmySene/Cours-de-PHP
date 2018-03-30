@@ -22,7 +22,10 @@
 				$resultat = $valeur1 * $valeur2;
 				break;
 			case "/":
-				$resultat = $valeur1 / $valeur2;
+				if($valeur2 == 0)
+					$resultat = "Division par 0";
+				else
+					$resultat = $valeur1 / $valeur2;
 				break;
 		}
 		
