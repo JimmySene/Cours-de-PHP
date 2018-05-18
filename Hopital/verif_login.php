@@ -1,4 +1,4 @@
-<?php 
+<?php session_start();
 
 $login = $_POST['login'];
 $pwd = $_POST['password'];
@@ -10,8 +10,11 @@ $resultat = mysqli_query($con, $req);
 
 if(mysqli_num_rows($resultat) > 0)
 {
-	echo 'CONNECTE !';
+	$_SESSION['login'] = true;
+	$_SESSION['user'] = $login;
+	$_SESSION['lvl'] = mysqli_fetch_assoc($resultat)['lvl'];
+	header('location:page_privee.php');
 } else {
-	header("location:login.php");
+	header("location:login.php?erreur");
 }
 ?>

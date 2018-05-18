@@ -12,6 +12,8 @@
 		<p><label for="password">Mot de passe : </label> <input type="password" name="password" id="password" /></p>
 		<p><input type="submit" /></p>
 	</form>	
+	<?php if(isset($_GET['erreur'])) 
+			echo "Mauvais login / mot de passe." ?>
 		
 	</body>
 </html>
